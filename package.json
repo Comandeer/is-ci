@@ -1,0 +1,60 @@
+{
+  "name": "@comandeer/is-ci",
+  "version": "0.0.0",
+  "description": "Simple CLI wrapper for is-ci package",
+  "bin": "bin/is-ci",
+  "main": "dist/is-ci.js",
+  "jsnext:main": "dist/is-ci.es2015.js",
+  "module": "dist/is-ci.es2015.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "rlb",
+    "lint": "eslint src/**/*.js tests/*.js",
+    "pretest": "npm run lint",
+    "test": "nyc mocha tests/*.js --timeout 15000 --include babel-register",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "preversion": "npm test && npm run build && git add -f dist/",
+    "postversion": "git rm -r --cached dist/ && git commit -m \"chore(dist): clean after release [ci skip]\" && git push origin && git push origin --tags",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Comandeer/is-ci.git"
+  },
+  "keywords": [
+    "is-ci",
+    "cli"
+  ],
+  "author": "Comandeer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Comandeer/is-ci/issues"
+  },
+  "homepage": "https://github.com/Comandeer/is-ci#readme",
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "dist/**/*.js",
+      "tests/**/*.js"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@comandeer/rollup-lib-bundler": "^0.3.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "codecov": "^3.0.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.11.0",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
+    "rimraf": "^2.6.2"
+  }
+}
