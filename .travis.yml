@@ -1,13 +1,8 @@
 dist: trusty
-addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
 language: node_js
 node_js:
   - 8
+  - 9
 before_install: if [[ $( node --version ) =~ ^v8. ]]; then npm install -g greenkeeper-lockfile; fi;
 before_script:
   - if [[ $( node --version ) =~ ^v8. ]]; then greenkeeper-lockfile-update; fi;
