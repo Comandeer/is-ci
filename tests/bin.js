@@ -16,11 +16,11 @@ function assertExitCode( expectedCode, env = {} ) {
 
 describe( 'is-ci executable', () => {
 	it( 'exits with code 1 when not CI env variable is set', () => {
-		assertExitCode( 1 );
+		return assertExitCode( 1 );
 	} );
 
 	it( 'exits with code 0 when CI env variable is set', () => {
-		assertExitCode( 0, {
+		return assertExitCode( 0, {
 			CI: 1
 		} );
 	} );
