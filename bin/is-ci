@@ -2,4 +2,4 @@
 /*! @comandeer/is-ci | (c) 2017 Comandeer | MIT license (see LICENSE) */
 'use strict';
 
-require( '../dist/is-ci' );
+require( '../dist/is-ci' )();
