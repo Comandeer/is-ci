@@ -8,10 +8,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 ### Added
-* [#5] Add support for Node 10.
+* [#5] Support for Node 10.
+* [#19] Support for Node 12.
+
+### Changed
+* [#12] **BREAKING CHANGE**: Update `is-ci` to `^2.0.0`.
 
 ## 1.0.0 – 2017-11-12
 ### Added
 * First working version, yay!
 
 [#5]: https://github.com/Comandeer/is-ci/issues/5
+[#12]: https://github.com/Comandeer/is-ci/pull/12
