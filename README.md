@@ -1,6 +1,6 @@
 # @comandeer/is-ci
 
-[![Build Status](https://travis-ci.org/Comandeer/is-ci.svg?branch=master)](https://travis-ci.org/Comandeer/is-ci) [![Dependency Status](https://david-dm.org/Comandeer/is-ci.svg)](https://david-dm.org/Comandeer/is-ci) [![devDependencies Status](https://david-dm.org/Comandeer/is-ci/dev-status.svg)](https://david-dm.org/Comandeer/is-ci?type=dev) [![codecov](https://codecov.io/gh/Comandeer/is-ci/branch/master/graph/badge.svg)](https://codecov.io/gh/Comandeer/is-ci) [![Greenkeeper badge](https://badges.greenkeeper.io/Comandeer/is-ci.svg)](https://greenkeeper.io/)
+![Build Status](https://github.com/Comandeer/is-ci/workflows/CI/badge.svg) [![Dependency Status](https://david-dm.org/Comandeer/is-ci.svg)](https://david-dm.org/Comandeer/is-ci) [![devDependencies Status](https://david-dm.org/Comandeer/is-ci/dev-status.svg)](https://david-dm.org/Comandeer/is-ci?type=dev) [![codecov](https://codecov.io/gh/Comandeer/is-ci/branch/master/graph/badge.svg)](https://codecov.io/gh/Comandeer/is-ci) [![Greenkeeper badge](https://badges.greenkeeper.io/Comandeer/is-ci.svg)](https://greenkeeper.io/)
 
 Simple CLI wrapper around [`is-ci` package](https://www.npmjs.com/package/is-ci).
 
