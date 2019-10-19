@@ -1,10 +1,10 @@
 const chai = require( 'chai' );
-const { execFile } = require( 'child_process' );
+const { exec } = require( 'child_process' );
 const expect = chai.expect;
 
 function assertExitCode( expectedCode, env = {} ) {
 	return new Promise( ( resolve ) => {
-		const childProcess = execFile( 'bin/is-ci', { env } );
+		const childProcess = exec( 'node bin/is-ci', { env } );
 
 		childProcess.on( 'exit', ( code ) => {
 			resolve( code );
