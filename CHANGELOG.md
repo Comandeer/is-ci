@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [3.0.0] – 2020-03-14
+### Removed
+
+* [#31] **BREAKING CHANGE**: support for Node 8.
+
 ## [2.0.0] – 2019-06-28
 ### Added
 * [#5] Support for Node 10.
